@@ -6,16 +6,22 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import {
     HeaderComponent,
-    NzMenuComponent
+    NzMenuComponent,
+    FooterComponent,
+    BreadcrumbComponent,
+    NzMenuItemComponent
 } from './components';
 
 const COMPONENTS = [
     HeaderComponent,
-    NzMenuComponent
+    NzMenuComponent,
+    FooterComponent,
+    BreadcrumbComponent,
+    NzMenuItemComponent
 ];
 
 @NgModule({
-    imports: [BrowserAnimationsModule,NgZorroAntdModule.forRoot()],
+    imports: [BrowserAnimationsModule, NgZorroAntdModule.forRoot()],
     exports: [...COMPONENTS],
     declarations: [...COMPONENTS],
 })

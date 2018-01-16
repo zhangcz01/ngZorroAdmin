@@ -1,7 +1,5 @@
-<nz-layout>
+<nz-layout style="min-height:100%">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo">
-    </div>
     <nzMenu></nzMenu>
   </nz-sider>
   <nz-layout>
@@ -9,14 +7,11 @@
       <nzHeader></nzHeader>
     </nz-header>
     <nz-content style="margin:0 16px;">
-      <nz-breadcrumb style="margin:12px 0;">
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-      </nz-breadcrumb>
+      <breadcrumb></breadcrumb>
       <div style="padding:24px; background: #fff; min-height: 360px;">
-        Bill is a cat.
+        内容
       </div>
     </nz-content>
-    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+    <footer></footer>
   </nz-layout>
 </nz-layout>
