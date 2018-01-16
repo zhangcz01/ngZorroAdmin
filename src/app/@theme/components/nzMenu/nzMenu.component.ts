@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalState } from '../../../global.state';
+import PerfectScrollbar from 'perfect-scrollbar';
 @Component({
   selector: 'nzMenu',
   templateUrl: './nzMenu.component.html',
@@ -17,6 +18,9 @@ export class NzMenuComponent implements OnInit {
   }
 
   ngOnInit() {
+    var ps = new PerfectScrollbar('#container ', {
+      minScrollbarLength : 20
+    } );//滚动条初始化
     this.MENU_ITEMS = [
       {
         title: '首页',
