@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', loadChildren: './home/home.module#HomeModule' },
+    { path: 'button', loadChildren: './button/button.module#ButtonModule' },
     { path: '**', redirectTo: 'home' }
 ];
 export const AppRouting: ModuleWithProviders = RouterModule.forRoot(routes);
