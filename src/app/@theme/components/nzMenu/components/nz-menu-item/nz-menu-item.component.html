@@ -1,4 +1,4 @@
-<li nz-menu-item *ngIf="!menuItem.children"  [routerLink]="menuItem.link">
+<li nz-menu-item *ngIf="!menuItem.children">
   <span title>
     <i class="{{ menuItem.icon }}"></i>
     <span>{{menuItem.title}}</span>
@@ -10,7 +10,7 @@
     <span>{{menuItem.title}}</span>
   </span>
   <ul>
-    <li nz-menu-item *ngFor="let subItem of menuItem.children">{{subItem.title}}</li>
+    <li nz-menu-item *ngFor="let subItem of menuItem.children" [routerLink]="['/button']">{{subItem.title}}</li>
   </ul>
 </li>
 <!-- <li nz-menu-item>

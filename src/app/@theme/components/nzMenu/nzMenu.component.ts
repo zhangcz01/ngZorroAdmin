@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalState } from '../../../global.state';
 import PerfectScrollbar from 'perfect-scrollbar';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'nzMenu',
   templateUrl: './nzMenu.component.html',
@@ -39,7 +41,7 @@ export class NzMenuComponent implements OnInit {
         children: [
           {
             title: '按钮',
-            link: '',
+            link: '/button',
           },
           {
             title: '表单',
