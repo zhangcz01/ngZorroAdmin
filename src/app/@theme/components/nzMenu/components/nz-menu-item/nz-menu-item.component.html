@@ -1,4 +1,19 @@
-<li nz-menu-item>
+<li nz-menu-item *ngIf="!menuItem.children"  [routerLink]="menuItem.link">
+  <span title>
+    <i class="{{ menuItem.icon }}"></i>
+    <span>{{menuItem.title}}</span>
+  </span>
+</li>
+<li nz-submenu *ngIf="menuItem.children">
+  <span title>
+    <i class="{{ menuItem.icon }}"></i>
+    <span>{{menuItem.title}}</span>
+  </span>
+  <ul>
+    <li nz-menu-item *ngFor="let subItem of menuItem.children">{{subItem.title}}</li>
+  </ul>
+</li>
+<!-- <li nz-menu-item>
   <span title>
     <i class="anticon anticon-mail"></i>
     <span>首页</span>
@@ -31,4 +46,4 @@
     <li nz-menu-item>Option 10</li>
     <li nz-menu-item>Option 11</li>
   </ul>
-</li>
+</li> -->

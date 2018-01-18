@@ -1,6 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
@@ -21,7 +22,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-    imports: [BrowserAnimationsModule, NgZorroAntdModule.forRoot()],
+    imports: [RouterModule,BrowserAnimationsModule, NgZorroAntdModule.forRoot()],
     exports: [...COMPONENTS],
     declarations: [...COMPONENTS],
 })

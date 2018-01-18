@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { GlobalState } from './global.state';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { AppComponent } from './app.component';
+import { Routes, RouterModule } from '@angular/router';
 import { ThemeModule } from './@theme/theme.module';
+import { AppRouting } from './app.routing';
+import { AppComponent } from './app.component';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
@@ -13,9 +14,11 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     BrowserAnimationsModule,
     ThemeModule.forRoot(),
-    NgZorroAntdModule.forRoot()
+    NgZorroAntdModule.forRoot(),
+    AppRouting
   ],
   providers: [GlobalState],
   bootstrap: [AppComponent]

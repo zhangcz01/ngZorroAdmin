@@ -8,7 +8,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
 })
 export class NzMenuComponent implements OnInit {
   isCollapsed: boolean;
-  MENU_ITEMS: any = [];
+  menuItems: any = [];
   constructor(
     private _state: GlobalState
   ) {
@@ -18,161 +18,52 @@ export class NzMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    var ps = new PerfectScrollbar('#container ', {
-      minScrollbarLength : 20
-    } );//滚动条初始化
-    this.MENU_ITEMS = [
+    //滚动条初始化
+    // var ps = new PerfectScrollbar('#container ', {
+    //   // maxScrollbarLength : 20
+    //   // handlers:['wheel']
+    //   // swipeEasing: true
+    //   // scrollingThreshold:3000
+    //   suppressScrollX: true
+    // });
+    this.menuItems = [
       {
         title: '首页',
-        icon: 'nb-home',
-        link: '/pages/dashboard',
-        home: true,
+        icon: 'anticon anticon-home',
+        link: 'home'
       },
       {
-        title: 'FEATURES',
-        group: true,
-      },
-      {
-        title: 'UI Features',
-        icon: 'nb-keypad',
-        link: '/pages/ui-features',
+        title: 'UI 特点',
+        icon: 'anticon anticon-appstore',
+        link: '',
         children: [
           {
-            title: 'Buttons',
-            link: '/pages/ui-features/buttons',
+            title: '按钮',
+            link: '',
           },
           {
-            title: 'Grid',
-            link: '/pages/ui-features/grid',
+            title: '表单',
+            link: '',
           },
           {
-            title: 'Icons',
+            title: '图标',
             link: '/pages/ui-features/icons',
           },
           {
-            title: 'Modals',
+            title: '弹窗',
             link: '/pages/ui-features/modals',
           },
           {
-            title: 'Typography',
+            title: '评分',
             link: '/pages/ui-features/typography',
           },
           {
-            title: 'Animated Searches',
+            title: '头像',
             link: '/pages/ui-features/search-fields',
           },
           {
-            title: 'Tabs',
+            title: '日历',
             link: '/pages/ui-features/tabs',
-          },
-        ],
-      },
-      {
-        title: 'Forms',
-        icon: 'nb-compose',
-        children: [
-          {
-            title: 'Form Inputs',
-            link: '/pages/forms/inputs',
-          },
-          {
-            title: 'Form Layouts',
-            link: '/pages/forms/layouts',
-          },
-        ],
-      },
-      {
-        title: 'Components',
-        icon: 'nb-gear',
-        children: [
-          {
-            title: 'Tree',
-            link: '/pages/components/tree',
-          }, {
-            title: 'Notifications',
-            link: '/pages/components/notifications',
-          },
-        ],
-      },
-      {
-        title: 'Maps',
-        icon: 'nb-location',
-        children: [
-          {
-            title: 'Google Maps',
-            link: '/pages/maps/gmaps',
-          },
-          {
-            title: 'Leaflet Maps',
-            link: '/pages/maps/leaflet',
-          },
-          {
-            title: 'Bubble Maps',
-            link: '/pages/maps/bubble',
-          },
-        ],
-      },
-      {
-        title: 'Charts',
-        icon: 'nb-bar-chart',
-        children: [
-          {
-            title: 'Echarts',
-            link: '/pages/charts/echarts',
-          },
-          {
-            title: 'Charts.js',
-            link: '/pages/charts/chartjs',
-          },
-          {
-            title: 'D3',
-            link: '/pages/charts/d3',
-          },
-        ],
-      },
-      {
-        title: 'Editors',
-        icon: 'nb-title',
-        children: [
-          {
-            title: 'TinyMCE',
-            link: '/pages/editors/tinymce',
-          },
-          {
-            title: 'CKEditor',
-            link: '/pages/editors/ckeditor',
-          },
-        ],
-      },
-      {
-        title: 'Tables',
-        icon: 'nb-tables',
-        children: [
-          {
-            title: 'Smart Table',
-            link: '/pages/tables/smart-table',
-          },
-        ],
-      },
-      {
-        title: 'Auth',
-        icon: 'nb-locked',
-        children: [
-          {
-            title: 'Login',
-            link: '/auth/login',
-          },
-          {
-            title: 'Register',
-            link: '/auth/register',
-          },
-          {
-            title: 'Request Password',
-            link: '/auth/request-password',
-          },
-          {
-            title: 'Reset Password',
-            link: '/auth/reset-password',
           },
         ],
       },

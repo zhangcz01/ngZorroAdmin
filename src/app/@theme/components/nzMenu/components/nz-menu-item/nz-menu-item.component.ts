@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GlobalState } from '../../../../../global.state';
 
 @Component({
@@ -7,6 +7,7 @@ import { GlobalState } from '../../../../../global.state';
   styleUrls: ['./nz-menu-item.component.scss']
 })
 export class NzMenuItemComponent implements OnInit {
+  @Input() menuItem: any;
   isCollapsed: boolean;
   constructor(
     private _state: GlobalState
@@ -17,6 +18,7 @@ export class NzMenuItemComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.menuItem)
   }
 
 }

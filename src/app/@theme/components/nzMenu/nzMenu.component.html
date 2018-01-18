@@ -1,4 +1,4 @@
 <div class="logo"></div>
-<ul id="container" nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
-  <nz-menu-item></nz-menu-item>
+<ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
+  <nz-menu-item [menuItem]="item" *ngFor="let item of menuItems"></nz-menu-item>
 </ul>
