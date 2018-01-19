@@ -1,15 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
-// import { DynamicMain } from './dynamic.main';
+import { ButtonMain } from './button.main';
 import { ButtonComponent } from './components';
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   {
     path: '',
-    component: ButtonComponent,
-    // children: [
-    //   { path: 'dynamic', component: DynamicComponent },
-    //   { path: '**', redirectTo: 'dynamic' }
-    // ]
+    component: ButtonMain,
+    children: [
+      { path: 'buttonson', component: ButtonComponent },
+      { path: '**', redirectTo: 'button' }
+    ]
   }
 ];
 export const routing = RouterModule.forChild(routes);
