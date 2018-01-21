@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalState } from '../../../global.state';
-import PerfectScrollbar from 'perfect-scrollbar';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
-
+// import SimpleBar from 'SimpleBar';
 @Component({
   selector: 'nzMenu',
   templateUrl: './nzMenu.component.html',
@@ -24,6 +23,8 @@ export class NzMenuComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    // console.log(Scrollbars)
     this._onRouteChange = this._router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         console.log(event)
@@ -32,13 +33,7 @@ export class NzMenuComponent implements OnInit {
     })
 
     //滚动条初始化
-    // var ps = new PerfectScrollbar('#container ', {
-    //   // maxScrollbarLength : 20
-    //   // handlers:['wheel']
-    //   // swipeEasing: true
-    //   // scrollingThreshold:3000
-    //   suppressScrollX: true
-    // });
+    // var myElement = new SimpleBar(document.getElementById('myElement'))
     this.menuItems = [
       {
         title: '首页',
