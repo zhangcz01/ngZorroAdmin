@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GlobalState } from '../../../../../global.state';
+import { MenuService } from '../../../../services';
 
 @Component({
   selector: 'nz-menu-item',
@@ -10,7 +11,8 @@ export class NzMenuItemComponent implements OnInit {
   @Input() menuItem: any;
   isCollapsed: boolean;
   constructor(
-    private _state: GlobalState
+    private _state: GlobalState,
+    private _service: MenuService
   ) {
     // this._state.subscribe('menuState', (isCollapsed) => {
     //   this.isCollapsed = isCollapsed;
@@ -19,6 +21,15 @@ export class NzMenuItemComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.menuItem)
+  }
+  public onToggleSubMenu($event, item) {
+    console.log(item)
+    this._service.activeLinkSave(item);
+    // item.selected = true;
+    // this._state.notifyDataChanged('activeMenu', item);
+    // $event.item = item;
+    // this.toggleSubMenu.emit($event);
+    // return false;
   }
 
 }

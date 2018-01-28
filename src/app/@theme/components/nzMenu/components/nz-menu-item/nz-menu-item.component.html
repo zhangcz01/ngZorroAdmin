@@ -1,4 +1,4 @@
-<li nz-menu-item *ngIf="!menuItem.children" [routerLink]="menuItem.link">
+<li nz-menu-item *ngIf="!menuItem.children" [routerLink]="menuItem.path" [nzSelected]=menuItem.selected (click)="onToggleSubMenu($event, menuItem)">
   <span title>
     <i class="{{ menuItem.icon }}"></i>
     <span>{{menuItem.title}}</span>
@@ -10,6 +10,6 @@
     <span>{{menuItem.title}}</span>
   </span>
   <ul>
-    <li nz-menu-item *ngFor="let subItem of menuItem.children" [routerLink]="subItem.link">{{subItem.title}}</li>
+    <li nz-menu-item *ngFor="let subItem of menuItem.children" [routerLink]="subItem.path" [nzSelected]=subItem.selected (click)="onToggleSubMenu($event,subItem)">{{subItem.title}}</li>
   </ul>
 </li>

@@ -2,41 +2,57 @@ export const APP_MENU = [
     {
         title: '首页',
         icon: 'anticon anticon-home',
-        link: 'home'
+        link: 'home',
+        selected: true,
+        expanded: false
     },
     {
         title: 'UI 特点',
         icon: 'anticon anticon-appstore',
-        link: '',
+        link: 'button',
         children: [
             {
                 title: '按钮',
-                link: '/button/buttonson',
+                link: 'buttonson',
+                selected: false,
+                expanded: false
             },
             {
                 title: '表单',
-                link: '',
+                link: 'form',
+                selected: false,
+                expanded: false
             },
             {
                 title: '图标',
-                link: '/pages/ui-features/icons',
+                link: 'icons',
+                selected: false,
+                expanded: false
             },
             {
                 title: '弹窗',
-                link: '/pages/ui-features/modals',
+                link: 'modals',
+                selected: false,
+                expanded: false
             },
             {
                 title: '评分',
-                link: '/pages/ui-features/typography',
+                link: 'typography',
+                selected: false,
+                expanded: false
             },
             {
                 title: '头像',
-                link: '/pages/ui-features/search-fields',
+                link: 'search-fields',
+                selected: false,
+                expanded: false
             },
             {
                 title: '日历',
-                link: '/pages/ui-features/tabs',
+                link: 'tabs',
+                selected: false,
+                expanded: false
             },
         ],
-    },
+    }
 ];
